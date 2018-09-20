@@ -1,3 +1,151 @@
 page-home {
+  // desktop
+  //   @media (min-width: map-get($grid-breakpoints, lg)) {
+  // Your rules here
+  .badge {
+    margin-left: 1vw;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.1rem 0.15rem;
+    height: 2vw;
+    background-color: rgb(63, 63, 63);
+    min-width: auto;
+    .button {
+      padding: 0;
+      height: 2vw;
+      background-color: rgb(63, 63, 63);
+      margin: 0;
+      box-shadow: none;
+      margin-left: 0.5vw;
+    }
+  }
+  .ht > div {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .bc {
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-self: flex-start;
+    max-width: 40vw;
+    overflow-x: scroll;
+  }
 
+  .scroll-content {
+    background-color: lightslategray;
+  }
+  .toolbar-background {
+    background-color: cornflowerblue;
+    color: #fff;
+  }
+
+  .toolbar-color {
+    color: #fff;
+  }
+  .main {
+    display: flex;
+    align-content: center;
+    align-items: space-around;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+  }
+  .rec {
+    height: 80vh;
+    width: 40vw;
+    background-color: rgba(255, 255, 255, 0.85);
+    margin-top: 3vh;
+  }
+  .hc {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .head {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    width: 40vw;
+    margin-top: -1.5vh;
+  }
+  .rc {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+  }
+  .ht {
+    background-color: rgba(255, 255, 255, 0.85);
+    // width: 50vw;
+    padding: 1rem 2rem;
+
+    //   text-align: center;
+  }
+  .item {
+    background-color: rgba(0, 0, 0, 0);
+    margin: 0;
+    padding: 0;
+    padding: 0rem 1rem;
+  }
+  .resultList {
+    height: 65vh;
+    overflow-y: scroll;
+  }
+  .resultListI {
+    height: 55vh;
+    overflow-y: scroll;
+  }
+
+  .help {
+    font-size: 2rem;
+    padding: 0.5rem 2rem;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    width: 40vw;
+  }
+  .sKW {
+    color: cornflowerblue;
+  }
+  .dt {
+    align-self: flex-start;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    width: 40vw;
+    .button {
+      background-color: #333;
+      box-shadow: none;
+      height: 5vh;
+      margin-right: 3vw;
+    }
+    .button:hover {
+      background-color: #666;
+    }
+  }
+  .ht {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    width: 40vw;
+  }
+  .fixed-content {
+    max-height: 100vh;
+    overflow: hidden;
+  }
+  //   }
 }

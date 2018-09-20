@@ -1,14 +1,78 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
-
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <div class="main">
+    <div class="hc">
+      <div class="head">
+        <div class="ht">
+          Selected Keyword:
+          <p class="sKW">
+            {{ selectedKeyword }}
+          </p>
+        </div>
+      </div>
+      <div class="head">
+        <div class="ht">
+          <div *ngIf="tagsSelected">
+            <div class="dt">
+              <div>Tags assigned:</div>
+              <button ion-button (click)="saveKeyword()">
+                SAVE
+              </button>
+            </div>
+            <div class="bc" text-wrap>
+              <ion-badge *ngFor="let tag of currentTags" class="badge">
+                <p>
+                  {{ tag.name }}
+                </p>
+                <button ion-button (click)="removeTag(tag)">
+                  <ion-icon name="close">
+
+                  </ion-icon>
+                </button>
+              </ion-badge>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- first section -->
+    <div class="rc">
+
+      <div class="rec">
+        <div class="help">
+          Look up a Keyword
+        </div>
+        <ion-searchbar [(ngModel)]="userInput" showCancelButton="true" (ionInput)="input($event)" (ionCancel)="onCancel($event)"
+          animated="true">
+        </ion-searchbar>
+        <ion-list class="resultList">
+          <ion-item *ngFor="let result of results" (click)="selectKeyword(result)">
+            {{ result }}
+          </ion-item>
+        </ion-list>
+      </div>
+      <!-- second section -->
+      <div class="rec">
+        <div class="help" *ngIf="hasSelected">
+          Assign tags to <p class="sKW"> {{ selectedKeyword }} </p>
+        </div>
+        <ion-searchbar [(ngModel)]="tagSearchTerm" showCancelButton="true" (ionInput)="tagSearch($event.data)" animated="true"
+          *ngIf="hasSelected">
+        </ion-searchbar>
+        <ion-list class="resultListI" *ngIf="hasSelected">
+          <ion-item *ngFor="let result of tagResults" (click)="selectTag(result)">
+            {{ result.name }}
+          </ion-item>
+        </ion-list>
+
+      </div>
+
+    </div>
+    <ion-fab>
+      <button ion-fab (click)="saveToFile()">
+        <ion-icon name='download'>
+
+        </ion-icon>
+      </button>
+    </ion-fab>
+  </div>
 </ion-content>
