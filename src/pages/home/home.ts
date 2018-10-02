@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { NavController } from "ionic-angular";
-import * as keywords from "../../assets/files/keywords.json";
+import * as keywords from "../../assets/files/topics.json";
 import * as interests from "../../assets/files/interests.json";
 import { Http } from "@angular/http";
 
